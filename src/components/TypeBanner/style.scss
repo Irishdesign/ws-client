@@ -1,0 +1,10 @@
+@import "../../common.scss";
+@mixin commonFz {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+.aucType {
+    @include commonFz;
+    background-color: $yellow;
+}

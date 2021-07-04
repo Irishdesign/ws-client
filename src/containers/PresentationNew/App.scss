@@ -1,0 +1,35 @@
+@import "../../common.scss";
+.presentation {
+    padding-top: 80px;
+    margin: 0 auto;
+    width: 80%;
+    .aucType {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .timer {
+        @include flexCenter;
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 94px;
+            border: solid 5px $yellow;
+            padding-top: 108px;
+            line-height: 60px;
+        }
+    }
+    .currentPrice {
+        border: solid 3px #ddd;
+        border-top: transparent;
+        width: 60%;
+        height: 100px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        font-size: 50px;
+        text-align: center;
+        line-height: 100px;
+    }
+}
