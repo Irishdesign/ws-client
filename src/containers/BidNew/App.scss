@@ -1,0 +1,177 @@
+@import "../../common.scss";
+@mixin commonFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+@mixin commonFz {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+.container .bid {
+    width: 100%;
+    max-width: 300px;
+    @include mobile {
+        width: 100%;
+    }
+    margin: 0 auto;
+    margin-top: 120px;
+    text-align: center;
+    //  padding-right: 150px;
+    .ant-form-item-control-input-content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .auctionBlock {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+    .control-hooks {
+        max-width: 200px;
+    }
+    .ant-row.ant-form-item {
+        .ant-col-offset-8 {
+            @include mobile {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.container .playerPage {
+    margin-top: 60px;
+    min-width: 300px;
+    width: 60%;
+    @include mobile {
+        width: 95%;
+        margin-top: 50px;
+    }
+    .row {
+        margin-top: 10px;
+    }
+    .fixed {
+        position: fixed;
+        width: 60%;
+        @include mobile {
+            width: 95%;
+        }
+    }
+    .header {
+        background-color: white;
+        left: 20%;
+        @include mobile {
+            left: 2.5%;
+        }
+        .aucType {
+            @include commonFz;
+            background-color: #edae49;
+        }
+
+        .time {
+            @include commonFlex;
+            .highlight {
+                display: block;
+                @include grayCardRedius;
+                height: 120px;
+                width: 49%;
+                .title {
+                    margin-top: 5px;
+                }
+                .value {
+                    font-size: 60px;
+                    @include mobile {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+    @mixin statusColor($color) {
+        color: $color;
+        border: solid 2px $color;
+    }
+    .blockBidder {
+        background-color: rgba(255, 255, 255, 0.927);
+        height: 130px;
+        left: 20%;
+        @include mobile {
+            left: 2.5%;
+        }
+        bottom: 0;
+        .ant-input-number {
+            width: 95%;
+            height: 50px;
+            > div > input {
+                height: 50px;
+            }
+        }
+        .myOrder {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 10px;
+        }
+        .myMoney {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            width: 98%;
+            .value {
+                margin-left: 10px;
+            }
+            .label,
+            .value {
+                flex: 2;
+            }
+            .status {
+                flex: 1;
+                //  color: $primary;
+                //  border: solid 2px $primary;
+                border-radius: 3px;
+                text-align: center;
+                @include statusColor($red);
+                &.Waiting {
+                    @include statusColor($yellow);
+                }
+                &.End {
+                    @include statusColor($primary);
+                }
+            }
+        }
+        .bidInput {
+            flex: 2;
+        }
+        .bidInput,
+        .bidBtn {
+            justify-content: center;
+            display: flex;
+        }
+        .bidBtn {
+            flex: 1;
+            @include commonFlex;
+            .btn {
+                cursor: pointer;
+                @include grayCardRedius;
+                background-color: $primary;
+                @include commonFz;
+                width: 95%;
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+    }
+    .blockAuction {
+        margin-top: 200px;
+        height: auto;
+        padding-bottom: 150px;
+    }
+    .cover {
+        width: 94%;
+        height: 184px;
+        background-color: white;
+        position: absolute;
+    }
+}

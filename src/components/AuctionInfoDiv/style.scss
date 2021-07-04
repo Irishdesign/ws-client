@@ -1,0 +1,21 @@
+@import "../../common.scss";
+.block {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    @include mobile {
+        flex-wrap: wrap;
+    }
+}
+.forPlayer {
+    > li {
+        margin-top: 10px;
+        @include mobile {
+            margin-top: 0;
+        }
+    }
+    h3 {
+        margin-top: 15px;
+        text-align: center;
+    }
+}

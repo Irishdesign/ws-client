@@ -1,0 +1,80 @@
+.currencyInputContainer {
+  font-family: 'Open Sans';
+
+  .ant-input-focused, .ant-input-number-input:focus{
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  .currencyBox {
+    display: inline-block;
+    width: 100%;
+    .sign {
+      padding-right: 5px;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .amount {
+      display: inline-block;
+      width: 100%;
+      max-width: 390px;
+
+      .ant-input-group-addon{
+        color: #AEBCC1;
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: bold;
+        padding: 9px 18px;
+        padding-bottom: 0px;
+        margin-top: -6px;
+        padding-top: 16px;
+        height: 59px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      .currencyInputFilled {
+        border: 1px solid #536080;
+      }
+      .ant-input-number-input{
+        height: 59px;
+        line-height: 20px;
+      }
+      .ant-input-number {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        .ant-input-number-handler-wrap {
+          display: none;
+        }
+        .ant-input-number-input {
+          font-size: 16px;
+          color: #a8aaac;
+        }
+        height: 59px;
+        max-width: 310px;
+        line-height: 20px;
+        width: 100%;
+
+        &:focus-within {
+          border: 1px solid #36c8ee;
+        }
+      }
+    }
+  }
+  .questionWrapper {
+    display: inline-block;
+    width: 100%;
+    .question {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 19px;
+    }
+    .hintRight {
+      color: #bcbcbc;
+      margin-top: -10px;
+    }
+  }
+}
+
