@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Input, Button, Modal } from "antd";
 import { setUser } from "../../store/action";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import * as util from "../../utils";
 import * as constants from "../../constants";
 const layout = {
@@ -40,9 +40,9 @@ const LoginModal = (props) => {
         //       "roles":["user"]
         //   }
     };
-    const TOKEN = localStorage.getItem(constants.SESSION_KEY);
+   //  const TOKEN = localStorage.getItem(constants.SESSION_KEY);
     React.useEffect(() => {
-        if (TOKEN) {
+        if (localStorage.getItem(constants.SESSION_KEY)) {
             util.getUserInfo();
         }
     }, []);
@@ -50,9 +50,9 @@ const LoginModal = (props) => {
     //      setUser();
     //      close();
     //  };
-    const onReset = () => {
-        form.resetFields();
-    };
+   //  const onReset = () => {
+   //      form.resetFields();
+   //  };
 
     const onFill = () => {
         form.setFieldsValue({

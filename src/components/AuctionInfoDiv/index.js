@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import { Descriptions } from "antd";
-import { useSelector, useDispatch } from "react-redux";
-import * as util from "../../utils";
+import React from "react";
 import "./style.scss";
 import ListItem from "../ListItem";
 import * as constants from "../../constants";
 import { Link } from "react-router-dom";
 const AuctionInfo = (props) => {
-    const { visible, close, data, isPlayer, playerInfo } = props;
+    const { data, isPlayer, playerInfo } = props;
     const {
         no,
         title,
@@ -30,7 +27,7 @@ const AuctionInfo = (props) => {
     const getTypeLabel = (ty) => {
         let label = "";
         Object.keys(constants.AUC_TYPE).forEach((ele) => {
-            if (ty == constants.AUC_TYPE[ele]) {
+            if (ty === constants.AUC_TYPE[ele]) {
                 label = ele;
             }
         });
@@ -39,7 +36,7 @@ const AuctionInfo = (props) => {
     const getValueTypeLabel = (ty) => {
         let label = "";
         Object.keys(constants.INIT_VALUE_TYPE).forEach((ele) => {
-            if (ty == constants.INIT_VALUE_TYPE[ele]) {
+            if (ty === constants.INIT_VALUE_TYPE[ele]) {
                 label = ele;
             }
         });
@@ -55,6 +52,8 @@ const AuctionInfo = (props) => {
                 return value_type === constants.INIT_VALUE_TYPE.GAUSSIAN ? "std" : ty;
             case "to":
                 return value_type === constants.INIT_VALUE_TYPE.GAUSSIAN ? "dev" : ty;
+            default:
+                return;
         }
     };
     const blank = "- -";

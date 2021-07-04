@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Input, Button, Modal, InputNumber, Select, Checkbox } from "antd";
-import { useSelector, useDispatch } from "react-redux";
 import * as utils from "../../utils";
 import { AUC_TYPE, INIT_VALUE_TYPE } from "../../constants";
 import CurrencyInput from "../CurrencyInput";
@@ -16,20 +15,20 @@ const tailLayout = {
 
 const CreateModal = (props) => {
     const [form] = Form.useForm();
-    const { setFieldsValue, getFieldValue } = form;
-    React.useEffect(()=>{
-       console.log(1111122222)
-      setFieldsValue({
-         auc_type:'E',
-         title: 'auto make',
-         period: 3,
-         init_price:100,
-         reservation_price:100,
-         value_type:'U',
-         from_std:100,
-         to_dev:200,
-      });
-  },[])
+    const { getFieldValue } = form;
+//     React.useEffect(()=>{
+//        console.log(1111122222)
+//       setFieldsValue({
+//          auc_type:'E',
+//          title: 'auto make',
+//          period: 3,
+//          init_price:100,
+//          reservation_price:100,
+//          value_type:'U',
+//          from_std:100,
+//          to_dev:200,
+//       });
+//   },[])
     const [isAuto, setIsAuto] = React.useState(false);
     const [isSealed, setIsSealed] = React.useState(false);
     const [isDutch, setIsDutch] = React.useState(false);

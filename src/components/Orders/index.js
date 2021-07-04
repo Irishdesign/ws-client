@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Descriptions, Table, Switch } from "antd";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { Descriptions, Table } from "antd";
 
 const Orders = (props) => {
     const { data, hasWinner, chooseSecond, reservationPrice, initValueNoShow, titleNoShow } = props;
@@ -57,9 +56,9 @@ const Orders = (props) => {
               ];
     };
 
-    function onChange(pagination, filters, sorter, extra) {
-        console.log("params", pagination, filters, sorter, extra);
-    }
+   //  function onChange(pagination, filters, sorter, extra) {
+   //      console.log("params", pagination, filters, sorter, extra);
+   //  }
     //  const data = [];
     //  for (let i = 0; i < 100; i++) {
     //      data.push({

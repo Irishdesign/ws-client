@@ -1,9 +1,8 @@
 import * as React from "react";
-import { BankOutlined, MenuOutlined } from "@ant-design/icons";
+import { MenuOutlined } from "@ant-design/icons";
 import { Button, message } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import "./style.scss";
-import { Link } from "react-router-dom";
 import SignupModal from "../SignupModal";
 import * as util from "../../utils";
 import LoginModal from "../LoginModal";

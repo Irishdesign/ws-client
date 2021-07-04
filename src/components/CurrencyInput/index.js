@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Input, InputNumber } from 'antd';
+import { InputNumber } from 'antd';
 import './currencyInput.scss';
 
 const fieldValue = props => {
@@ -34,9 +34,9 @@ const CurrencyInput = props => (
           placeholder={props.placeholder}
           disabled={props.disabled}
           className={
-            props.disabled == 'true'
+            props.disabled === 'true'
               ? 'currencyTrue'
-              : props.initialValue || props.initialValue == 0
+              : props.initialValue || props.initialValue === 0
               ? 'currencyInputFilled'
               : ''
           }
